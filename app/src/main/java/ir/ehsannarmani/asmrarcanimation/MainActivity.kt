@@ -59,7 +59,7 @@ class MainActivity : ComponentActivity() {
                 }
                 val animatedStart = animateFloatAsState(
                     targetValue = arcStart.value,
-                    animationSpec = tween(5000, easing = EaseInOutCubic),
+                    animationSpec = tween(5000, easing = FastOutSlowInEasing),
                     finishedListener = {
                         arcStart.value += 1f
                     })
@@ -71,7 +71,7 @@ class MainActivity : ComponentActivity() {
                     initialValue = 0.001f,
                     targetValue = 1f,
                     animationSpec = infiniteRepeatable(
-                        animation = tween(3000, easing = EaseInOutCubic),
+                        animation = tween(3000, easing = FastOutSlowInEasing),
                         repeatMode = RepeatMode.Reverse
                     )
                 )
